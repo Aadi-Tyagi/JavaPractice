@@ -27,8 +27,6 @@ public class BankAccount {
         System.out.println("Account 1 balance is: " + account1.getAccountBalance());
         System.out.println("Account 1 balance is: " + account1.getAccountBalance());
         System.out.println("Account 1 balance is: " + account1.getAccountBalance());
-        System.out.println("Account 1 balance is: " + account1.getAccountBalance());
-        System.out.println("Account 1 balance is: " + account1.getAccountBalance());
         System.out.println("Account 2 balance is: " + account2.getAccountBalance());
 
     }
