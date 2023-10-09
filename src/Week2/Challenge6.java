@@ -68,7 +68,7 @@ class Challenge6{
         System.out.println("Name: " + employee.getEmployeeName());
         System.out.println("Base Salary: $" + employee.getEmployeeSalary());
         System.out.println("Calculated Salary: $" + employee.calculateSalary());
-        System.out.println("-----");
+        System.out.println("----------------------------------");
     }
 
 }
