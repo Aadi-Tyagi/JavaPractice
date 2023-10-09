@@ -27,6 +27,6 @@ public class Product {
 
     void printDetails(){
         System.out.println("Product: "+productName);
-        System.out.println("Product Price: $"+productPrice);
+        System.out.println("Product Price: $ "+productPrice);
     }
 }

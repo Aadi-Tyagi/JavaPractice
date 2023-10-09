@@ -17,6 +17,6 @@ public class Customer {
     }
 
     public void printDetails() {
-        System.out.println("Customer Name: " + customerName);
+        System.out.println("Customer Name:  " + customerName);
     }
 }

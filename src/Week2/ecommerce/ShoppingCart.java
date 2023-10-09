@@ -15,7 +15,7 @@ public class ShoppingCart {
     }
 
     public void printDetails() {
-        System.out.println("Shopping Cart Items:");
+        System.out.println("Shopping Cart Items: ");
         for (Product product : products) {
             product.printDetails();
             System.out.println("-----");

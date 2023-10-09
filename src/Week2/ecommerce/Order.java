@@ -10,7 +10,7 @@ public class Order {
     }
     public void printDetails() {
         customer.printDetails();
-        System.out.println("Order Details:");
+        System.out.println("Order Details: ");
         cart.printDetails();
         System.out.println("-----");
     }

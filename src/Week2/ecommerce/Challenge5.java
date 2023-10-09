@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Challenge5 {
     public static void main(String[] args) {
-
+ 
         // Create a customer
         Customer customer = new Customer("John Doe");
 
