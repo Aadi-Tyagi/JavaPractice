@@ -87,3 +87,91 @@ Example:
 - Log a warning message.
 - Log an error message.
 
+## Week 3: 
+
+### Excercise 1:  
+### Create a Maven Project:
+- Use the command-line or an IDE to create a new Maven project named HelloMaven.
+- Ensure the project structure includes a src folder with main and test subdirectories.  
+### Add Dependencies:
+- Open pom.xml and add a dependency for junit to enable testing.  
+### Create a Java Class:
+- Inside src/main/java, create a class HelloMavenApp with a main method that prints "Hello, Maven!".  
+### Build and Run:
+- Use the Maven commands to clean, compile, and package your project.
+- Execute the generated JAR file to see the output.
+
+### Exercise 2:
+Dependency Management
+Scenario: You are working on a large-scale project with multiple modules. Each module has its own set of dependencies. You need to ensure that all modules are using compatible versions of shared dependencies.  
+* Create a multi-module Maven project with the following modules:
+  * core-module
+  *  feature-module
+  *  web-module
+- Each module should have its own set of dependencies in its pom.xml file.
+- Use Maven's dependencyManagement section to define a set of common dependencies and versions in the parent pom.xml. Ensure that all modules inherit these versions.
+- In the feature-module, add a custom dependency with a specific version. Ensure it is compatible with the versions defined in the parent pom.xml.
+- Verify that all modules can successfully build and run without dependency conflicts.
+
+### Exercise 3:
+### Initialize a Spring Boot Project:
+* Use Spring Initializer (https://start.spring.io/) or your IDE to create a new Spring Boot project with the following details:
+  * Project: HelloSpringBoot
+  * Dependencies: Spring Web
+### Create a Controller:
+
+* Create a new class HelloController in the com.example.hellospringboot package.
+* Annotate it with @RestController.
+* Add a method that returns a greeting message when accessed through a GET request.
+### Run and Test:
+* Start the Spring Boot application.
+* Use a tool like Postman or a web browser to access the endpoint and verify that it returns the greeting message.
+
+### Exercise 4:
+### Scenario:
+You are building a microservices-based application. Each microservice has its own configuration requirements, including database connections, external service URLs, and logging levels.
+
+### Exercise: Configuration Profiles
+* Create a Spring Boot application named MicroserviceA.
+* Define multiple configuration profiles (e.g., dev, qa, prod) in application.properties or application.yml.
+* Set different database connection properties, service URLs, and logging levels for each profile.
+* Implement a REST endpoint that displays the current configuration properties.
+* Test the application with different profiles and verify that it correctly loads the corresponding configurations.
+
+### Exercise 5:
+### API and Controllers
+### Objective: Understand and implement RESTful APIs using Spring Boot.
+
+### Create a Model Class:
+* Create a class Book with attributes like id, title, author, and year.
+### Create a Controller:
+* Create a new class BookController in the com.example.hellospringboot package.
+* Annotate it with @RestController.
+* Implement methods for the following operations:
+  * Get a list of all books (GET request).
+  * Get a specific book by ID (GET request).
+  * Add a new book (POST request).
+  * Update an existing book (PUT request).
+  * Delete a book by ID (DELETE request).
+
+### Test the API:
+* Use a tool like Postman or write JUnit tests to verify the functionality of your API endpoints.
+### Optional: Data Persistence (Spring Data JPA):
+* Configure an in-memory database like H2.
+* Use Spring Data JPA to perform CRUD operations on the Book entity.
+
+### Exercise 6:
+### API and Controllers: Complex Data Manipulation
+### Scenario:
+You are developing a complex e-commerce platform. You need to implement a set of RESTful APIs to manage products, orders, and customer accounts.
+
+### Exercise: E-commerce API
+- Design and implement a set of APIs for:
+- Managing products (CRUD operations).
+- Placing and processing orders.
+- Managing customer accounts (registration, login, profile updates).
+- Implement validation for requests (e.g., ensuring a product's price is a positive number, validating order quantities).
+- Use Spring Data JPA for data persistence. Define entities for products, orders, and customer accounts.
+- Implement exception handling for scenarios like invalid requests, resource not found, etc.
+- Write comprehensive unit tests to cover various scenarios.
+- Optional: Implement JWT-based authentication for customer accounts.
