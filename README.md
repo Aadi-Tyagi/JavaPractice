@@ -90,14 +90,14 @@ Example:
 ## Week 3: 
 
 ### Excercise 1:  
-### Create a Maven Project:
+#### Create a Maven Project:
 - Use the command-line or an IDE to create a new Maven project named HelloMaven.
 - Ensure the project structure includes a src folder with main and test subdirectories.  
-### Add Dependencies:
+#### Add Dependencies:
 - Open pom.xml and add a dependency for junit to enable testing.  
-### Create a Java Class:
+#### Create a Java Class:
 - Inside src/main/java, create a class HelloMavenApp with a main method that prints "Hello, Maven!".  
-### Build and Run:
+#### Build and Run:
 - Use the Maven commands to clean, compile, and package your project.
 - Execute the generated JAR file to see the output.
 
@@ -114,16 +114,16 @@ Scenario: You are working on a large-scale project with multiple modules. Each m
 - Verify that all modules can successfully build and run without dependency conflicts.
 
 ### Exercise 3:
-### Initialize a Spring Boot Project:
+#### Initialize a Spring Boot Project:
 * Use Spring Initializer (https://start.spring.io/) or your IDE to create a new Spring Boot project with the following details:
   * Project: HelloSpringBoot
   * Dependencies: Spring Web
-### Create a Controller:
+#### Create a Controller:
 
 * Create a new class HelloController in the com.example.hellospringboot package.
 * Annotate it with @RestController.
 * Add a method that returns a greeting message when accessed through a GET request.
-### Run and Test:
+#### Run and Test:
 * Start the Spring Boot application.
 * Use a tool like Postman or a web browser to access the endpoint and verify that it returns the greeting message.
 
@@ -142,9 +142,9 @@ You are building a microservices-based application. Each microservice has its ow
 ### API and Controllers
 ### Objective: Understand and implement RESTful APIs using Spring Boot.
 
-### Create a Model Class:
+#### Create a Model Class:
 * Create a class Book with attributes like id, title, author, and year.
-### Create a Controller:
+#### Create a Controller:
 * Create a new class BookController in the com.example.hellospringboot package.
 * Annotate it with @RestController.
 * Implement methods for the following operations:
@@ -154,9 +154,9 @@ You are building a microservices-based application. Each microservice has its ow
   * Update an existing book (PUT request).
   * Delete a book by ID (DELETE request).
 
-### Test the API:
+#### Test the API:
 * Use a tool like Postman or write JUnit tests to verify the functionality of your API endpoints.
-### Optional: Data Persistence (Spring Data JPA):
+#### Optional: Data Persistence (Spring Data JPA):
 * Configure an in-memory database like H2.
 * Use Spring Data JPA to perform CRUD operations on the Book entity.
 
