@@ -1,0 +1,34 @@
+#To create an order
+{
+    "customerName": "Aditya",
+    "items": [
+        {
+            "product": {
+                "id": 3
+            },
+            "quantity": 5
+        }
+    ]
+}
+
+#to add order item:
+{
+  "product": {
+    "id": 1
+  },
+  "quantity": 2
+}
+
+
+#To add new customer
+{
+    "username":"aadi1604",
+    "password":"qwerty123"
+}
+
+
+#To add new product
+{
+    "name": "Shampoo",
+    "price": 300
+}
