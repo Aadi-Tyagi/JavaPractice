@@ -30,7 +30,7 @@ public class CustomerController {
 
     @PostMapping("/register")
     public Customer registerCustomer(@RequestBody Customer customer) {
-        return customerService.addCustomer(customer);
+        return customerService.registerCustomer(customer);
     }
 
     @PutMapping("/{id}")
