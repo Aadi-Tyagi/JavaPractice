@@ -18,7 +18,7 @@ public class CustomerService {
         return customerRepo.findAll();
     }
 
-    public Customer addCustomer(Customer customer) {
+    public Customer registerCustomer(Customer customer) {
         // Check for required fields
         if (customer.getUsername() == null || customer.getUsername().isEmpty()) {
             throw new CustomerValidationException("Username is required.");

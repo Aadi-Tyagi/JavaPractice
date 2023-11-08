@@ -1,9 +1,11 @@
 package com.example.eCommerce.Controller;
 
+import com.example.eCommerce.Entity.Customer;
 import com.example.eCommerce.Entity.OrderItem;
 import com.example.eCommerce.Entity.Orders;
 import com.example.eCommerce.Exceptions.OrderValidationException;
 import com.example.eCommerce.Service.OrderService;
+import com.example.eCommerce.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,10 +16,12 @@ import java.util.List;
 public class OrderController {
 
     private final OrderService orderService;
+    private final CustomerService customerService;
 
     @Autowired
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService, CustomerService customerService) {
         this.orderService = orderService;
+        this.customerService=customerService;
     }
 
     @GetMapping
@@ -30,8 +34,10 @@ public class OrderController {
         return orderService.getOrderById(id);
     }
 
-    @PostMapping
-    public void createOrder(@RequestBody Orders order) throws OrderValidationException {
+    @PostMapping("/{customerId}")
+    public void createOrder(@PathVariable int customerId, @RequestBody Orders order) throws OrderValidationException {
+        Customer customer = customerService.getCustomerById(customerId);
+        order.setCustomer(customer); // Set the customer for the order
         orderService.createOrder(order);
     }
 

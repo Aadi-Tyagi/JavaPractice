@@ -60,7 +60,7 @@ public class OrderService {
 
     public Orders updateOrder(int id, Orders order) {
         Orders existingOrder = getOrderById(id);
-        existingOrder.setCustomerName(order.getCustomerName());
+        existingOrder.setCustomer(order.getCustomer());
         existingOrder.setItems(order.getItems());
 
 
