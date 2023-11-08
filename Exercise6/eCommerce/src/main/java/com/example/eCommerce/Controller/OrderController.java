@@ -1,5 +1,6 @@
 package com.example.eCommerce.Controller;
 
+import com.example.eCommerce.DTO.OrderDTO;
 import com.example.eCommerce.Entity.Customer;
 import com.example.eCommerce.Entity.OrderItem;
 import com.example.eCommerce.Entity.Orders;
@@ -9,6 +10,7 @@ import com.example.eCommerce.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -25,9 +27,23 @@ public class OrderController {
     }
 
     @GetMapping
-    public List<Orders> getAllOrders() {
-        return orderService.getAllOrders();
+    public List<OrderDTO> getAllOrders() {
+        List<Orders> orders = orderService.getAllOrders();
+        List<OrderDTO> orderDTOs = new ArrayList<>();
+
+        for (Orders order : orders) {
+            OrderDTO orderDTO = new OrderDTO();
+            orderDTO.setId(order.getId());
+            orderDTO.setCustomerId(order.getCustomer().getCustomerId());
+            orderDTO.setCustomerName(order.getCustomer().getCustomerName());
+            orderDTO.setPhoneNumber(order.getCustomer().getPhoneNumber());
+            orderDTO.setItems(order.getItems());
+            orderDTOs.add(orderDTO);
+        }
+
+        return orderDTOs;
     }
+
 
     @GetMapping("/{id}")
     public Orders getOrderById(@PathVariable int id) {

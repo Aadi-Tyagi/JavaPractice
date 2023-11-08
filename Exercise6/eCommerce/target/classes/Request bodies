@@ -31,11 +31,11 @@
 
 #To add new customer
 {
-    "customerName": "John Doe",
+    "customerName": "Aditya",
     "phoneNumber": "1234567890",
-    "address": "123 Main Street",
-    "username": "johndoe",
-    "password": "securepassword"
+    "address": "Clarivate Noida",
+    "username": "aadi07",
+    "password": "qwerty@123"
 }
 
 

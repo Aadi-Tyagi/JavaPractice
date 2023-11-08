@@ -1,6 +1,7 @@
 package com.example.eCommerce.Entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -22,6 +23,7 @@ public class Orders {
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
+    @JsonIdentityReference(alwaysAsId = true)
     @JsonBackReference
     private Customer customer;
 
