@@ -3,8 +3,14 @@ package com.example.eCommerce.Entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 public class OrderItem {
     @Id
@@ -25,64 +31,4 @@ public class OrderItem {
     private int quantity;
     @Column(name = "total_price")
     private double totalPrice;
-
-
-
-    public OrderItem(Product product, Orders orders, double pricePerProduct, int quantity, double totalPrice) {
-        this.product = product;
-        this.orders = orders;
-        this.pricePerProduct = pricePerProduct;
-        this.quantity = quantity;
-        this.totalPrice = totalPrice;
-    }
-
-    public OrderItem(){}
-
-    public Integer getId() {
-        return id;
-    }
-
-    public double getPricePerProduct() {
-        return pricePerProduct;
-    }
-
-    public void setPricePerProduct(double pricePerProduct) {
-        this.pricePerProduct = pricePerProduct;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public Orders getOrders() {
-        return orders;
-    }
-
-    public void setOrders(Orders orders) {
-        this.orders = orders;
-    }
 }
